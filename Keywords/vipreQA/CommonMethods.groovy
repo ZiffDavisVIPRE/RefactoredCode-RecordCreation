@@ -364,17 +364,17 @@ public class CommonMethods {
 		println('Status:'+Status)
 		WebUI.verifyMatch(Status, 'Accepted', false)
 		WebUI.verifyElementText(findTestObject('Object Repository/QA Sandbox/DirectQuote_Creation/Verify_Status'), 'Accepted', FailureHandling.STOP_ON_FAILURE)
-		
+
 		WebUI.sleep(10000)
 		WebUI.refresh(FailureHandling.STOP_ON_FAILURE)
-		
+
 		//Click on the created Contract
-		WebUI.scrollToElement(findTestObject('Object Repository/QA Sandbox/Quote/Quote_DetailsTab/lbl_NextStep'), 20, FailureHandling.STOP_ON_FAILURE)
-		//bUI.scrollToElement(findTestObject('Object Repository/QA Sandbox/Quote/Contract_Section/link_ContractName'), 20)
+		//WebUI.scrollToElement(findTestObject('Object Repository/QA Sandbox/Quote/Quote_DetailsTab/lbl_NextStep'), 20, FailureHandling.STOP_ON_FAILURE)
+		WebUI.scrollToElement(findTestObject('Object Repository/QA Sandbox/DirectQuote_Creation/lbl_Status'), 20)
 		WebUI.click(findTestObject('Object Repository/QA Sandbox/Quote/Contract_Section/link_ContractName'), FailureHandling.STOP_ON_FAILURE)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/QA Sandbox/Quote/Contract_Section/Verify_Contract'), 20, FailureHandling.STOP_ON_FAILURE)
 		WebUI.verifyElementPresent(findTestObject('Object Repository/QA Sandbox/Quote/Contract_Section/Verify_Contract'), 20, FailureHandling.STOP_ON_FAILURE)
-		
+
 
 	}
 }
